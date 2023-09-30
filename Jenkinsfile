@@ -29,15 +29,25 @@ pipeline {
       sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
     }
   }
-stage('Email Notification') {
-steps {
-echo "Hi"
 }
 }
-post {
-always {
-emailext to: "faizulfaity3@gmail.com",
-subject: "jenkins biuld:${currentBuild.currentResult}:${env.Docker-Jenkin-CICD}"
+pipeline {
+    agent any
+    environment {
+        recipientEmails = "faizulfaity3@gmail.com",
+    }
+    stages {
+        stage('Hello') {
+            steps {
+                echo "Hello world"
+                    }
+            }
+        }
+    post{
+        always{
+            mail to: "${recipientEmails}",
+            subject: "Build Status",
+         }
 }
 }
 }
