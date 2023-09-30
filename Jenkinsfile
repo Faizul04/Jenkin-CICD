@@ -38,7 +38,6 @@ post {
 always {
 emailext to: "faizulfaity3@gmail.com",
 subject: "jenkins biuld:${currentBuild.currentResult}:${env.Docker-Jenkin-CICD}"
-body: "${currentBuild.currentResult}: Job ${env.Docker-Jenkin-CICD}/nMore Info can be found here: ${env.BUILD_URL}"
 }
 }
 }
