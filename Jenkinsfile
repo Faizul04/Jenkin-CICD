@@ -30,26 +30,4 @@ pipeline {
     }
   }
 }
-pipeline {
-    agent any
-    environment {
-        recipientEmails = "faizulfaity3@gmail.com"
-    }
-    stages {
-        stage('Hello') {
-            steps {
-                echo "Hello world"
-                    }
-            }
-        }
-    post{
-        always{
-            mail to: "${recipientEmails}",
-            subject: "Build Status",
-         }
 }
-}
-}
-}
-
-
