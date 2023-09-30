@@ -33,7 +33,7 @@ pipeline {
 pipeline {
     agent any
     environment {
-        recipientEmails = "faizulfaity3@gmail.com",
+        recipientEmails = "faizulfaity3@gmail.com"
     }
     stages {
         stage('Hello') {
