@@ -35,5 +35,5 @@ always {
 emailext body: 'email sent from Jenkins', subject: 'Pipeline status', to: 'faizulfaity3@gmail' 
 }
 }
-}
+
 
