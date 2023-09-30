@@ -36,4 +36,4 @@ emailext body: 'email sent from Jenkins', subject: 'Pipeline status', to: 'faizu
 }
 }
 }
-}
+
