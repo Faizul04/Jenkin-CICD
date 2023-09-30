@@ -27,12 +27,7 @@ pipeline {
     always {
       sh 'docker rm -f mypycont'
       sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
-
-}
- }
-post {
-always {
-emailext body: 'email sent from Jenkins', subject: 'Pipeline status', to: 'faizulfaity3@gmail' 
+emailext body: 'email sent from Jenkins', subject: 'Pipeline status', to: 'faizulfaity3@gmail'
 }
 }
 
